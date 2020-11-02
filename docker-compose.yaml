@@ -1,0 +1,23 @@
+version: '3'
+services:
+  site:
+    build:
+      context: .
+    image: ${IMAGE}
+    container_name: ${NAME}
+    restart: always
+    environment:
+      - SITE=${SITE}
+      - DOMAIN=${DOMAIN}
+      - NAME=${NAME}
+    env_file:
+      - .env
+    volumes:
+      - ${SITE}:/site:cached
+    networks:
+      - internal
+
+
+networks:
+  internal:
+    external: false

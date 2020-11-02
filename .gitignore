@@ -1,0 +1,6 @@
+env
+files
+resume*
+*.go
+!main.go
+goLightHTTP
