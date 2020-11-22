@@ -7,4 +7,3 @@ require (
 	github.com/gofiber/fiber/v2 v2.1.2
 )
 
-replace github.com/gofiber/fiber/v2 => ../fiber
